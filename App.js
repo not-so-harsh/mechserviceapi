@@ -19,7 +19,7 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use('/user', userRoute)
+app.use('/user', userRoute) ;
 
 
 app.use((req, res, next) => {
