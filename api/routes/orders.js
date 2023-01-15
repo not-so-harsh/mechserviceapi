@@ -3,9 +3,10 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const Orders = require("../model/orders");
 
-router.get("/", (req, res, next) => {
+router.get("/", async (req, res, next) => {
+  const orders = await Orders.find()
   res.status(200).json({
-    msg: "dgddrdrdr",
+  orders
   });
 });
 
